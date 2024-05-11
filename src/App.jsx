@@ -7,7 +7,7 @@ import Signup from './pages/Signup/Signup'
 import Login from './pages/Login/Login'
 import Landing from './pages/Landing/Landing'
 import Profiles from './pages/Profiles/Profiles'
-import ChangePassword from './pages/ChangePassword/ChangePassword'
+import DeviceList from './pages/DeviceList/DeviceList'
 
 // components
 import NavBar from './components/NavBar/NavBar'
@@ -55,10 +55,11 @@ function App() {
           element={<Login handleAuthEvt={handleAuthEvt} />}
         />
         <Route
-          path="/auth/change-password"
+          path="/blogs"
           element={
             <ProtectedRoute user={user}>
-              <ChangePassword handleAuthEvt={handleAuthEvt} />
+              {/* pass the blogs as blogs to the BlogList componenet */}
+              <DeviceList />
             </ProtectedRoute>
           }
         />
