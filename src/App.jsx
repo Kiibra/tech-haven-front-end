@@ -1,12 +1,11 @@
 // npm modules
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Routes, Route, useNavigate } from 'react-router-dom'
 
 // pages
 import Signup from './pages/Signup/Signup'
 import Login from './pages/Login/Login'
 import Landing from './pages/Landing/Landing'
-import Profiles from './pages/Profiles/Profiles'
 import DeviceList from './pages/DeviceList/DeviceList'
 
 // components
@@ -15,12 +14,14 @@ import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
 
 // services
 import * as authService from './services/authService'
+import * as deviceService from './services/deviceService'
 
 // styles
 import './App.css'
 
 function App() {
   const [user, setUser] = useState(authService.getUser())
+  const [devices, setDevices] = useState({})
   const navigate = useNavigate()
 
   const handleLogout = () => {
@@ -33,19 +34,22 @@ function App() {
     setUser(authService.getUser())
   }
 
+  useEffect(() => {
+    const fetchAllDevices = async () => {
+      //API CALL
+      const devicesData = await deviceService.index()
+      setDevices(devicesData) // <-- Set state with the data returned
+    }
+    if (user) fetchAllDevices() // <-- Only run the function(to display device data) if we have a user!!
+
+    //user is in dependecies b/c everytime there is a user, want to display devices and if there isnt a user, we need to update state to be empty
+  }, [user])
+
   return (
     <>
       <NavBar user={user} handleLogout={handleLogout} />
       <Routes>
         <Route path="/" element={<Landing user={user} />} />
-        <Route
-          path="/profiles"
-          element={
-            <ProtectedRoute user={user}>
-              <Profiles />
-            </ProtectedRoute>
-          }
-        />
         <Route
           path="/auth/signup"
           element={<Signup handleAuthEvt={handleAuthEvt} />}
@@ -55,11 +59,10 @@ function App() {
           element={<Login handleAuthEvt={handleAuthEvt} />}
         />
         <Route
-          path="/blogs"
+          path="/devices"
           element={
             <ProtectedRoute user={user}>
-              {/* pass the blogs as blogs to the BlogList componenet */}
-              <DeviceList />
+              <DeviceList devices={devices}/>
             </ProtectedRoute>
           }
         />
