@@ -1,11 +1,21 @@
-//CSS
+// npm modules
+import { NavLink } from 'react-router-dom'
+
+// css
 import styles from './DeviceCard.module.css'
 
-const DeviceCard = () => {
-  return (  
-    <main className={styles.container}>
-      <h1>Device Card</h1>
-    </main>
+const DeviceCard = ({ device }) => {
+  return (
+    <NavLink to={`/devices/${device._id}`} >
+      <main className={styles.container} >
+        <header>
+          <span>
+            <h1>{device.make}</h1>
+          </span>
+        </header>
+        <p>{device.model}</p>
+      </main>
+    </NavLink>
   )
 }
 
