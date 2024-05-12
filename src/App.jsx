@@ -8,6 +8,7 @@ import Login from './pages/Login/Login'
 import Landing from './pages/Landing/Landing'
 import DeviceList from './pages/DeviceList/DeviceList'
 import DeviceDetails from './pages/DeviceDetails/DeviceDetails'
+import NewDevice from './pages/NewDevice/NewDevice'
 
 // components
 import NavBar from './components/NavBar/NavBar'
@@ -72,6 +73,14 @@ function App() {
           element={
             <ProtectedRoute user={user}>
               <DeviceDetails />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/devices/new" 
+          element={
+            <ProtectedRoute user={user}>
+              <NewDevice />
             </ProtectedRoute>
           }
         />
