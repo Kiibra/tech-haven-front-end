@@ -47,7 +47,7 @@ const NewDevice = () => {
       id="price-input"
       placeholder="price"
     />
-    {/* <label htmlFor="category-input">Category</label> */}
+    <label htmlFor="category-input">Category</label>
     <select
       required
       name="category"
