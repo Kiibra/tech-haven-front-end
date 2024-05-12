@@ -7,6 +7,7 @@ import Signup from './pages/Signup/Signup'
 import Login from './pages/Login/Login'
 import Landing from './pages/Landing/Landing'
 import DeviceList from './pages/DeviceList/DeviceList'
+import DeviceDetails from './pages/DeviceDetails/DeviceDetails'
 
 // components
 import NavBar from './components/NavBar/NavBar'
@@ -63,6 +64,14 @@ function App() {
           element={
             <ProtectedRoute user={user}>
               <DeviceList devices={devices}/>
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/devices/:deviceId"
+          element={
+            <ProtectedRoute user={user}>
+              <DeviceDetails />
             </ProtectedRoute>
           }
         />

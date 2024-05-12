@@ -17,6 +17,18 @@ async function index() {
   }
 }
 
+async function show(deviceId) {
+  try {
+    const res = await fetch(`${BASE_URL}/${deviceId}`, {
+      headers: { 'Authorization': `Bearer ${tokenService.getToken()}`}
+    })
+    return res.json()
+  } catch (error) {
+    console.log(error)
+  }
+}
+
 export {
   index,
+  show
 }
