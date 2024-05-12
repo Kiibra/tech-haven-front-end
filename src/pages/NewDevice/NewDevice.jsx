@@ -1,11 +1,34 @@
+//npm modules
+import { useState } from 'react'
 
 // CSS
 import styles from './NewDevice.module.css'
 
-const NewDevice = () => {
+const NewDevice = (props) => {
+  const [formData, setFormData] = useState({
+    make: '',
+    model: '',
+    photo: '',
+    color: '',
+    price: '',
+    category: 'New',
+    damage: 'no',
+    scratches: 'no',
+    cracks: 'no'
+  })
+
+  const handleSubmit = evt => {
+    evt.preventDefault()
+    props.handleAddDevice(formData)
+  }
+
+  const handleChange = evt => {
+    setFormData({...formData, [evt.target.name]: evt.target.value})
+  }
+
   return ( 
   <main className={styles.container}>
-    <form>
+    <form onSubmit={handleSubmit}>
       <h1>Add New Device</h1>
     <label htmlFor="Make-input">Make</label>
     <input
@@ -14,6 +37,8 @@ const NewDevice = () => {
       name="make"
       id="make-input"
       placeholder="Make"
+      value={formData.make}
+      onChange={handleChange}
     />
     <label htmlFor="model-input">Model</label>
     <input
@@ -22,6 +47,8 @@ const NewDevice = () => {
       name="model"
       id="model-input"
       placeholder="Model"
+      value={formData.model}
+      onChange={handleChange}
     />
     <label htmlFor="photo-input">Photo</label>
     <input
@@ -30,6 +57,8 @@ const NewDevice = () => {
       name="photo"
       id="photo-input"
       placeholder="photo link"
+      value={formData.photo}
+      onChange={handleChange}
     />
     <label htmlFor="color-input">Color</label>
     <input
@@ -38,6 +67,8 @@ const NewDevice = () => {
       name="color"
       id="color-input"
       placeholder="color"
+      value={formData.color}
+      onChange={handleChange}
     />
     <label htmlFor="price-input">Price</label>
     <input
@@ -46,23 +77,42 @@ const NewDevice = () => {
       name="price"
       id="price-input"
       placeholder="price"
+      value={formData.price}
+      onChange={handleChange}
     />
     <label htmlFor="category-input">Category</label>
     <select
       required
       name="category"
       id="category-input"
+      value={formData.category}
+      onChange={handleChange}
     >
       <option value="New">New</option>
       <option value="Used">Used</option>
       <option value="Refurbished">Refurbished</option>
     </select>
     <label htmlFor="damage-checkbox">Damage</label>
-    <input type="checkbox" id='damage'/>
+    <input 
+      type="checkbox" 
+      id='damage'
+      value={formData.damage}
+      onChange={handleChange}
+    />
     <label htmlFor="scratches-checkbox">Scratches</label>
-    <input type="checkbox" id='scratches'/>
-    <label htmlFor="cracks-checkbox">Crackes</label>
-    <input type="checkbox" id='crack'/>
+    <input 
+      type="checkbox" 
+      id='scratches'
+      value={formData.scratches}
+      onChange={handleChange}
+    />
+    <label htmlFor="cracks-checkbox">Cracks</label>
+    <input 
+      type="checkbox" 
+      id='cracks'
+      value={formData.cracks}
+      onChange={handleChange}
+      />
     <button type="submit">SUBMIT</button>
   </form>
 </main>
