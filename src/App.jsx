@@ -9,6 +9,7 @@ import Landing from './pages/Landing/Landing'
 import DeviceList from './pages/DeviceList/DeviceList'
 import DeviceDetails from './pages/DeviceDetails/DeviceDetails'
 import NewDevice from './pages/NewDevice/NewDevice'
+import EditDevice from './pages/EditDevice/EditDevice'
 
 // components
 import NavBar from './components/NavBar/NavBar'
@@ -47,6 +48,24 @@ function App() {
     //user is in dependecies b/c everytime there is a user, want to display devices and if there isnt a user, we need to update state to be empty
   }, [user])
 
+  const handleDeleteDevice = async deviceId => {
+    const deletedDevice = await deviceService.delete(deviceId)
+    setDevices(devices.filter(device => device._id !== deletedDevice._id))
+    navigate('/devices')
+  }
+
+  const handleAddDevice = async deviceFormData => {
+    const newDevice = await deviceService.create(deviceFormData)
+    setDevices([newDevice, ...devices])
+    navigate('/devices')
+  }
+
+  const handleUpdateDevice = async deviceFormData => {
+    const updatedDevice = await deviceService.update(deviceFormData)
+    setDevices(devices.map(device => updatedDevice._id === device._id ? updatedDevice : device))
+    navigate('/devices')
+  }
+
   return (
     <>
       <NavBar user={user} handleLogout={handleLogout} />
@@ -72,7 +91,7 @@ function App() {
           path="/devices/:deviceId"
           element={
             <ProtectedRoute user={user}>
-              <DeviceDetails />
+              <DeviceDetails handleDeleteDevice={handleDeleteDevice}/>
             </ProtectedRoute>
           }
         />
@@ -80,7 +99,14 @@ function App() {
           path="/devices/new" 
           element={
             <ProtectedRoute user={user}>
-              <NewDevice />
+              <NewDevice handleAddDevice={handleAddDevice}/>
+            </ProtectedRoute>
+          }
+        />
+        <Route 
+          path='/devices/edit' element={
+            <ProtectedRoute user={user}>
+              <EditDevice handleUpdateDevice={handleUpdateDevice} />
             </ProtectedRoute>
           }
         />
