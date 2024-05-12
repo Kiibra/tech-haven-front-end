@@ -1,6 +1,6 @@
 // npm modules
 import { useState, useEffect } from 'react'
-import { useParams, NavLink } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 
 //CSS
 import styles from './DeviceDetails.module.css'
