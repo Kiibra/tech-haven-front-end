@@ -39,7 +39,7 @@ const NewDevice = () => {
       id="color-input"
       placeholder="color"
     />
-    <label htmlFor="price-input">Color</label>
+    <label htmlFor="price-input">Price</label>
     <textarea
       required
       type="text"
