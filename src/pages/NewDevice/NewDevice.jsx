@@ -6,7 +6,7 @@ const NewDevice = () => {
   return ( 
   <main className={styles.container}>
     <form>
-      <h1>add new device</h1>
+      <h1>Add New Device</h1>
     <label htmlFor="Make-input">Make</label>
     <input
       required
@@ -16,7 +16,7 @@ const NewDevice = () => {
       placeholder="Make"
     />
     <label htmlFor="model-input">Model</label>
-    <textarea
+    <input
       required
       type="text"
       name="model"
@@ -24,7 +24,7 @@ const NewDevice = () => {
       placeholder="Model"
     />
     <label htmlFor="photo-input">Photo</label>
-    <textarea
+    <input
       required
       type="text"
       name="photo"
@@ -32,15 +32,15 @@ const NewDevice = () => {
       placeholder="photo link"
     />
     <label htmlFor="color-input">Color</label>
-    <textarea
+    <input
       required
       type="text"
       name="color"
       id="color-input"
       placeholder="color"
     />
-    <label htmlFor="price-input">Color</label>
-    <textarea
+    <label htmlFor="price-input">Price</label>
+    <input
       required
       type="text"
       name="price"
