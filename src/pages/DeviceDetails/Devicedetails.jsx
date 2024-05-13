@@ -30,11 +30,10 @@ const DeviceDetails = (props) => {
 
 
   const handleAddOffer = async (offerFormData) => {
-    // const newOffer <-- We'll need a service function here
-    const newOffer = deviceService.createOffer(deviceId, offerFormData)
-    ///  in that blog, set the comments to alll the comments in that specific blog plus the new comment
+    const newOffer = await deviceService.createOffer(deviceId, offerFormData)
     setDevice({ ...device, offers: [...device.offers, newOffer] })
   }
+
 
   return (
     <main className={styles.container}>
@@ -66,7 +65,7 @@ const DeviceDetails = (props) => {
       </article>
       <section>
         <h1>Offers</h1>
-        <NewOffer handleAddOffer={handleAddOffer}/>
+        <NewOffer handleAddOffer={handleAddOffer} />
         <Offers offers={device.offers} user={props.user}/>
       </section>
     </main>

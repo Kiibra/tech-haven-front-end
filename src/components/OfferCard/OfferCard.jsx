@@ -10,7 +10,7 @@ const OfferCard = ({ offer, user, deviceId }) => {
     <main>
       <header>
         <AuthorInfo content={offer} />
-        <p>{offer.value}</p>
+        {/* <p>{offer.value}</p> */}
         {offer.author._id === user.profile &&
           <>
             <NavLink 
@@ -23,10 +23,11 @@ const OfferCard = ({ offer, user, deviceId }) => {
               <Icon category="Trash" />
             </button>
           </>
-        }
+        } 
       </header>
       <span>
         <p>{offer.comment}</p>
+        <p>{offer.value}</p>
       </span>
     </main>
   )
