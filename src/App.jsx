@@ -7,7 +7,7 @@ import Signup from './pages/Signup/Signup'
 import Login from './pages/Login/Login'
 import Landing from './pages/Landing/Landing'
 import DeviceList from './pages/DeviceList/DeviceList'
-import DeviceDetails from './pages/DeviceDetails/DeviceDetails'
+import DeviceDetails from './pages/DeviceDetails/Devicedetails'
 import NewDevice from './pages/NewDevice/NewDevice'
 import EditDevice from './pages/EditDevice/EditDevice'
 

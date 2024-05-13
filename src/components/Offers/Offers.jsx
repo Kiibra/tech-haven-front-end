@@ -1,3 +1,4 @@
+// components
 import OfferCard from "../OfferCard/OfferCard"
 
 const Offers = (props) => {
@@ -6,15 +7,14 @@ const Offers = (props) => {
   
   return (
     <>
-      {props.offers.map(offer =>
-        <OfferCard
-          key={offer._id}
-          offer={offer}
-          user={props.user}
-          deviceId={props.deviceId}
-        />
-      )}
-    </>
+    {props.offers.map((offer) => (
+      <OfferCard
+        key={offer._id}
+        offer={offer}
+        user={props.user}
+      />
+    ))}
+  </>
   )
 }
 
