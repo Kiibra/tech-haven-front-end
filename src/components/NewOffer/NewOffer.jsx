@@ -25,7 +25,7 @@ const NewOffer = () => {
 
   return (  
     <form className={styles.container} onSubmit={handleSubmit}>
-      <h2>Make New Offer</h2>
+      <h5>Make New Offer</h5>
       <textarea 
         required
         name="comment"
@@ -33,13 +33,16 @@ const NewOffer = () => {
         placeholder='Offer Comment'
         onChange={handleChange}
       />
-      <label htmlFor="value-input">value</label>
-      <input 
-        type="value" 
-        id='value-input'
-        value={formData.value}
-        onChange={handleChange}
-      />
+      <label htmlFor="photo-input">Value</label>
+    <input
+      required
+      type="text"
+      name="value"
+      id="value-input"
+      placeholder="value..."
+      value={formData.value}
+      onChange={handleChange}
+    />
       <button type="submit">Submit Offer</button>
     </form>
   )
