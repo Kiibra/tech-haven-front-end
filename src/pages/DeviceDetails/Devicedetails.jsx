@@ -9,7 +9,7 @@ import styles from './DeviceDetails.module.css'
 import * as deviceService from '../../services/deviceService'
 import Icon from '../../components/Icon/Icon'
 
-const DeviceDetails = () => {
+const DeviceDetails = (props) => {
   const [device, setDevice] = useState(null)
   const { deviceId } = useParams()
 
@@ -34,6 +34,9 @@ const DeviceDetails = () => {
                 <NavLink to={`/devices/edit`} state={device}>
                   <Icon category='Edit' />
                 </NavLink>
+                <button onClick={() => props.handleDeleteDevice(device._id)}>
+                  <Icon category='Trash' />
+                </button>
               </>
           </span>
         </header>
