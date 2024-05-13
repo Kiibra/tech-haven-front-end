@@ -4,13 +4,16 @@ import DeviceCard from '../../components/DeviceCard/DeviceCard'
 import styles from './DeviceList.module.css'
 
 const DeviceList = (props) => {
-  return (  
-    <main className={styles.container}>
-      <p>Device List</p>
-      {props.devices.map(device => (
-        <DeviceCard key={device._id} device={device}/>
-      ))}
-    </main>
+  return (
+    <>
+      <h2>Device List</h2>
+      <main className={styles.container}>
+        {props.devices.map(device => (
+          <DeviceCard key={device._id} device={device}/>
+        ))}
+      </main>
+    </>
+    
   )
 }
 

@@ -31,7 +31,7 @@ const DeviceDetails = (props) => {
       <article>
         <header>
           <h3>{device.category.toUpperCase()}</h3>
-          <h1>{device.make}</h1>
+          
           <span>
             <AuthorInfo content={device} />
 
@@ -47,8 +47,9 @@ const DeviceDetails = (props) => {
             }
           </span>
         </header>
+        <h1>{device.make}</h1>
         <h3>{device.model}</h3>
-        <p>{device.photo}</p>
+        <img src="{device.photo}" alt="device photo" />
         <p>{device.color}</p>
         <p>{device.price}</p>
         <p>{device.category}</p>
