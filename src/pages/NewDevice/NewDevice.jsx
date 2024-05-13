@@ -30,13 +30,13 @@ const NewDevice = (props) => {
   <main className={styles.container}>
     <form onSubmit={handleSubmit}>
       <h1>Add New Device</h1>
-    <label htmlFor="Make-input">Make</label>
+    <label htmlFor="make-input">Make</label>
     <input
       required
       type="text" 
       name="make"
       id="make-input"
-      placeholder="Make"
+      placeholder="product make"
       value={formData.make}
       onChange={handleChange}
     />
@@ -46,7 +46,7 @@ const NewDevice = (props) => {
       type="text"
       name="model"
       id="model-input"
-      placeholder="Model"
+      placeholder="product model"
       value={formData.model}
       onChange={handleChange}
     />
@@ -95,21 +95,21 @@ const NewDevice = (props) => {
     <label htmlFor="damage-checkbox">Damage</label>
     <input 
       type="checkbox" 
-      id='damage'
+      id='damage-checkbox'
       value={formData.damage}
       onChange={handleChange}
     />
     <label htmlFor="scratches-checkbox">Scratches</label>
     <input 
       type="checkbox" 
-      id='scratches'
+      id='scratches-checkbox'
       value={formData.scratches}
       onChange={handleChange}
     />
     <label htmlFor="cracks-checkbox">Cracks</label>
     <input 
       type="checkbox" 
-      id='cracks'
+      id='cracks-checkbox'
       value={formData.cracks}
       onChange={handleChange}
       />

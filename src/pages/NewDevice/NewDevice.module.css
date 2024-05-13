@@ -7,36 +7,3 @@
   align-items: center;
   flex-direction: column;
 }
-
-.container input, select, button { 
-  width: 100%;
-  padding: 14px;
-  font-size: 14px;
-  resize: vertical;
-  border-radius: 5px;
-  margin: 7px 0px 14px 0px;
-  border: 1px solid gray;
-  font-family: canada-type-gibson, sans-serif;
-}
-
-.container label {
-  font-weight: 600;
-  margin: 7px 0px 14px 0px;
-}
-
-.container button {
-  color: rgb(249, 249, 249);
-  font-weight: 600;
-  margin: 21px 0px 0px 0px;
-  background: rgb(88, 154, 236);
-}
-
-.container a {
-  border: none;
-  font-size: 14px;
-  background: none;
-  font-weight: 500;
-  margin-top: 14px;
-  text-align: center;
-  color: rgb(200, 200, 200);
-}
