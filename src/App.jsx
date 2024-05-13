@@ -91,7 +91,7 @@ function App() {
           path="/devices/:deviceId"
           element={
             <ProtectedRoute user={user}>
-              <DeviceDetails handleDeleteDevice={handleDeleteDevice}/>
+              <DeviceDetails user={user} handleDeleteDevice={handleDeleteDevice}/>
             </ProtectedRoute>
           }
         />
