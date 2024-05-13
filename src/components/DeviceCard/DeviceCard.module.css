@@ -1,0 +1,12 @@
+.container {
+  width: 80%;
+  height: 400px;
+  padding: 14px 21px;
+  border-radius: 5px;
+  border: 1px solid blue;
+  background-color: white;
+}
+
+.container header {
+  margin-bottom: 14px;
+}

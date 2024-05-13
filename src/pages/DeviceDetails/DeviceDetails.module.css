@@ -4,7 +4,7 @@
   overflow: scroll;
   align-items: center;
   flex-direction: column;
-  background-color: var(--card-background);
+  background-color: white;
 }
 
 .container article, .container > section {
@@ -18,7 +18,6 @@
 .container p {
   text-indent: 21px;
   text-align-last: left;
-	word-break: break-all;
 }
 
 .container header {
@@ -33,14 +32,6 @@
   margin-bottom: 7px;
 }
 
-.container h3 {
-  margin: 0;
-  font-size: 16px;
-  font-weight: 600;
-  margin-bottom: 10px;
-  color: var(--primary);
-}
-
 .container span {
   width: 100%;
   display: flex;
@@ -53,46 +44,25 @@
 }
 
 .container span button, .container span a {
-  margin: 0;
-  width: 20%;
-  padding: 5px;
-  font-size: 14px;
-  font-weight: 500;
   background: none;
-  margin-left: 7px;
+  margin-left: 10px;
   border-radius: 5px;
   text-align: center;
-  border: 1px solid var(--border);
-}
-
-.container span button, .container span a  {
   cursor: pointer;
 }
 
-.container > section article {
-  padding: 0;
-  width: 100%;
-  min-height: 140px;
-  border-radius: 5px;
-  margin: 4px 0px 14px;
-}
 
-.container > section h1 {
-  font-size: 21px;
-}
 
-.container > section article p {
-  text-indent: 0px;
-}
+
 
 .container header button, .container header a {
-  width: 30px;
-  height: 30px;
+  width: 55px;
+  height: 50px;
   display: flex;
   border-radius: 50%;
   align-items: center;
   justify-content: center;
-  border: 1px solid var(--border);
+  border: 1px solid black;
 }
 
 .container header button img, .container header a img {
@@ -104,16 +74,7 @@
 /* HOVER EFFECTS */
 
 .container header button:hover, .container header a:hover {
-  background-color: var(--border);
-}
-
-.container header button:hover img, .container header a:hover img {
-  filter: invert(1);
-  opacity: 1;
+  background-color: rgb(226, 226, 226);
 }
 
 /* ACTIVE EFFECTS */
-
-.container header button:active {
-  background-color: rgb(190, 190, 190);
-}
