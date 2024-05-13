@@ -4,6 +4,8 @@ import { useParams, NavLink } from 'react-router-dom'
 
 //components
 import AuthorInfo from '../../components/AuthorInfo/AuthorInfo'
+import NewOffer from '../../components/NewOffer/NewOffer'
+import Offers from '../../components/Offers/Offers'
 
 //CSS
 import styles from './DeviceDetails.module.css'
@@ -25,6 +27,14 @@ const DeviceDetails = (props) => {
   }, [deviceId])
 
   if (!device) return <p>Devices Loading</p>
+
+
+  const handleAddOffer = async (offerFormData) => {
+    // const newOffer <-- We'll need a service function here
+    const newOffer = deviceService.createOffer(deviceId, offerFormData)
+    ///  in that blog, set the comments to alll the comments in that specific blog plus the new comment
+    setDevice({ ...device, offers: [...device.offers, newOffer] })
+  }
 
   return (
     <main className={styles.container}>
@@ -56,6 +66,8 @@ const DeviceDetails = (props) => {
       </article>
       <section>
         <h1>Offers</h1>
+        <NewOffer handleAddOffer={handleAddOffer}/>
+        <Offers offers={device.offers} user={props.user}/>
       </section>
     </main>
   )

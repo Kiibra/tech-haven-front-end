@@ -72,10 +72,30 @@ async function deleteDevice(deviceId) {
   }
 }
 
+async function createOffer(deviceId, offerFormData) {
+  try {
+    const res = await fetch(`${BASE_URL}/${deviceId}/offers`, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${tokenService.getToken()}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(offerFormData)
+    })
+    return res.json()
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+
+
 export {
   index,
   show,
   create,
   update,
   deleteDevice as delete,
+  createOffer,
+
 }
