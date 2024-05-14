@@ -17,6 +17,9 @@ const EditOffer = () => {
   const handleChange = (evt) => {
     setFormData({ ...formData, [evt.target.name]: evt.target.value })
   }
+  const handleInputChange = (evt) => {
+    setFormData({...formData, [evt.target.name]:  evt.target.value.replace(/\D/g, "")})
+  }
 
   const handleSubmit = async (evt) => {
     evt.preventDefault()
@@ -33,7 +36,7 @@ const EditOffer = () => {
         name="value" 
         id='value-input'
         value={formData.value}
-        onChange={handleChange}
+        onChange={handleInputChange}
       />
       <textarea 
         required

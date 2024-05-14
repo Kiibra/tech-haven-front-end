@@ -25,6 +25,9 @@ const NewDevice = (props) => {
   const handleChange = evt => {
     setFormData({...formData, [evt.target.name]: evt.target.value})
   }
+  const handlePriceInput = (evt) => {
+    setFormData({...formData, [evt.target.name]:  evt.target.value.replace(/\D/g, "")})
+  }
 
   return ( 
   <main className={styles.container}>
@@ -78,7 +81,7 @@ const NewDevice = (props) => {
       id="price-input"
       placeholder="price"
       value={formData.price}
-      onChange={handleChange}
+      onChange={handlePriceInput}
     />
     <label htmlFor="category-input">Category</label>
     <select

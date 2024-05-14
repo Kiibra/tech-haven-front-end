@@ -7,12 +7,12 @@
   position: fixed; 
   padding: 14px 21px;
   align-items: center;
-  background: white;
+  background: #e0defd;
   border-bottom: 1px solid rgb(200, 200, 200);
 }
 
 .container img {
-  width: 80px;
+  width: 100px;
   margin-top: 10px;
 }
 
