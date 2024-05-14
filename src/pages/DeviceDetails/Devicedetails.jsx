@@ -63,7 +63,7 @@ const DeviceDetails = (props) => {
         </header>
         <h1>{device.make}</h1>
         <h3>{device.model}</h3>
-        <img src="{device.photo}" alt="device photo" />
+        <img src={device.photo} width="100" height="90" alt="device photo" />
         <p>{device.color}</p>
         <p>{device.price}</p>
         <p>{device.category}</p>
