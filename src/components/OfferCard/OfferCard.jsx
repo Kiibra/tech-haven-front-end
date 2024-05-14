@@ -5,20 +5,22 @@ import { NavLink } from "react-router-dom"
 import AuthorInfo from "../AuthorInfo/AuthorInfo"
 import Icon from "../Icon/Icon"
 
+// CSS
+import styles from './OfferCard.module.css'
+
 const OfferCard = ({ offer, user, deviceId, handleDeleteOffer}) => {
 
   return (  
-    <main>
+    <main className={styles.container}>
       <header>
         <AuthorInfo content={offer} />
-        {/* <p>{offer.value}</p> */}
         {offer.author._id === user.profile &&
           <>
             <NavLink 
               to={`/devices/${deviceId}/offers/edit`}
               state={offer}
             >
-              <Icon category="Edit" />
+              <button><Icon category="Edit" /></button>
             </NavLink>
             <button onClick={() => handleDeleteOffer(deviceId, offer._id)}>
               <Icon category="Trash" />

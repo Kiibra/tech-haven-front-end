@@ -68,8 +68,8 @@ const DeviceDetails = (props) => {
         <p>{device.price}</p>
         <p>{device.category}</p>
       </article>
+      <h1>Offers</h1>
       <section>
-        <h1>Offers</h1>
         <NewOffer handleAddOffer={handleAddOffer}/>
         <Offers offers={device.offers} user={props.user} deviceId={deviceId}
         handleDeleteOffer={handleDeleteOffer}

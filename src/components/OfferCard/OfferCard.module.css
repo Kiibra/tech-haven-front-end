@@ -1,0 +1,28 @@
+.container {
+  padding: 0;
+  display: flex;
+  border: none;
+  max-width: 100%;
+  box-shadow: none;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  background: fuchsia;
+  width: 400px;
+  border-radius: 5px;
+  margin-left: 50px;
+}
+
+.container > header {
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  align-items: center;
+}
+
+.container > span {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
