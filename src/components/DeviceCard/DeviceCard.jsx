@@ -1,14 +1,10 @@
-// npm modules
 import { NavLink } from 'react-router-dom'
-
-// css
 import styles from './DeviceCard.module.css'
 
-const DeviceCard = ({ device }) => {
-
+const DeviceCard = ({ device, addToCart }) => {
   return (
-    <NavLink to={`/devices/${device._id}`} >
-      <main className={styles.container} >
+    <main className={styles.container}>
+      <NavLink to={`/devices/${device._id}`}>
         <header>
           <img src={device.photo} width="120" height="130" alt="device photo" />    
           <span>
@@ -17,8 +13,9 @@ const DeviceCard = ({ device }) => {
         </header>
         <p>{device.model}</p>
         <p>{device.price}</p>
-      </main>
-    </NavLink>
+      </NavLink>
+      <button onClick={() => addToCart(device)}>+</button>
+    </main>
   )
 }
 
