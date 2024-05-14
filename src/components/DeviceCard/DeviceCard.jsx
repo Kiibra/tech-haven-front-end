@@ -10,7 +10,7 @@ const DeviceCard = ({ device }) => {
     <NavLink to={`/devices/${device._id}`} >
       <main className={styles.container} >
         <header>
-          <img src="{device.photo}" alt="device photo" />    
+          <img src={device.photo} width="120" height="130" alt="device photo" />    
           <span>
             <h1>{device.make}</h1>
           </span>
