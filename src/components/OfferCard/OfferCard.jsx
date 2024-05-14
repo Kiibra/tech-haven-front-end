@@ -6,6 +6,7 @@ import AuthorInfo from "../AuthorInfo/AuthorInfo"
 import Icon from "../Icon/Icon"
 
 const OfferCard = ({ offer, user, deviceId }) => {
+
   return (  
     <main>
       <header>

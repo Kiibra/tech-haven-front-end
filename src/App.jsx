@@ -10,6 +10,7 @@ import DeviceList from './pages/DeviceList/DeviceList'
 import DeviceDetails from './pages/DeviceDetails/Devicedetails'
 import NewDevice from './pages/NewDevice/NewDevice'
 import EditDevice from './pages/EditDevice/EditDevice'
+import EditOffer from './pages/EditOffer/EditOffer'
 
 // components
 import NavBar from './components/NavBar/NavBar'
@@ -24,7 +25,7 @@ import './App.css'
 
 function App() {
   const [user, setUser] = useState(authService.getUser())
-  const [devices, setDevices] = useState({})
+  const [devices, setDevices] = useState([])
   const navigate = useNavigate()
 
   const handleLogout = () => {
@@ -107,6 +108,13 @@ function App() {
           path='/devices/edit' element={
             <ProtectedRoute user={user}>
               <EditDevice handleUpdateDevice={handleUpdateDevice} />
+            </ProtectedRoute>
+          }
+        />
+        <Route 
+          path='/devices/:deviceId/offers/edit' element={
+            <ProtectedRoute user={user}>
+              <EditOffer />
             </ProtectedRoute>
           }
         />
