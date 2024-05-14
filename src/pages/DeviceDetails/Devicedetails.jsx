@@ -51,7 +51,7 @@ const DeviceDetails = (props) => {
 
             {device.author._id === props.user.profile &&
               <>
-                <NavLink to={`/devices/${deviceId}/edit`} state={device}>
+                <NavLink to={`/devices/edit`} state={device}>
                   <Icon category='Edit' />
                 </NavLink>
                 <button onClick={() => props.handleDeleteDevice(deviceId)}>
