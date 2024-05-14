@@ -13,6 +13,7 @@ const Offers = (props) => {
         offer={offer}
         user={props.user}
         deviceId={props.deviceId}
+        handleDeleteOffer={props.handleDeleteOffer}
       />
     ))}
   </>

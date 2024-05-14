@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom"
 import AuthorInfo from "../AuthorInfo/AuthorInfo"
 import Icon from "../Icon/Icon"
 
-const OfferCard = ({ offer, user, deviceId }) => {
+const OfferCard = ({ offer, user, deviceId, handleDeleteOffer}) => {
 
   return (  
     <main>
@@ -20,7 +20,7 @@ const OfferCard = ({ offer, user, deviceId }) => {
             >
               <Icon category="Edit" />
             </NavLink>
-            <button>
+            <button onClick={() => handleDeleteOffer(deviceId, offer._id)}>
               <Icon category="Trash" />
             </button>
           </>

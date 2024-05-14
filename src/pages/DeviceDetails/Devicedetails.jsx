@@ -33,6 +33,11 @@ const DeviceDetails = (props) => {
     const newOffer = await deviceService.createOffer(deviceId, offerFormData)
     setDevice({ ...device, offers: [...device.offers, newOffer] })
   }
+  
+  const handleDeleteOffer = async (deviceId, offerId) => {
+    await deviceService.deleteOffer(deviceId, offerId)
+    setDevice({ ...device, offers: device.offers.filter((offer) => offer._id !== offerId) })
+  }
 
 
   return (
@@ -66,7 +71,9 @@ const DeviceDetails = (props) => {
       <section>
         <h1>Offers</h1>
         <NewOffer handleAddOffer={handleAddOffer}/>
-        <Offers offers={device.offers} user={props.user} deviceId={deviceId}/>
+        <Offers offers={device.offers} user={props.user} deviceId={deviceId}
+        handleDeleteOffer={handleDeleteOffer}
+        />
       </section>
     </main>
   )

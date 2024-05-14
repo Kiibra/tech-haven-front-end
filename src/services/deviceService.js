@@ -104,6 +104,20 @@ async function updateOffer(deviceId, offerFormData) {
   }
 }
 
+const deleteOffer = async (deviceId, offerId) => {
+  try {
+    const res = await fetch(`${BASE_URL}/${deviceId}/offers/${offerId}`, {
+      method: 'DELETE',
+      headers: {
+        'Authorization': `Bearer ${tokenService.getToken()}`
+      }
+    })
+    return res.json()
+  } catch (error) {
+    console.log(error)
+  }
+}
+
 export {
   index,
   show,
@@ -112,4 +126,5 @@ export {
   deleteDevice as delete,
   createOffer,
   updateOffer,
+  deleteOffer,
 }
