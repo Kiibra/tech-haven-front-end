@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom'
 const Item = (props) => {
   return (
-    <li>
+    <div>
 			<NavLink to={`/devices/${props.device._id}`}>
         <header>
           <img src={props.device.photo} width="120" height="130" alt="device photo" />    
@@ -13,7 +13,7 @@ const Item = (props) => {
         <p>{props.device.price}</p>
       </NavLink>
       <button onClick={() => props.removeFromCart(props.idx)}>X</button>
-    </li>
+    </div>
   )
 }
 
