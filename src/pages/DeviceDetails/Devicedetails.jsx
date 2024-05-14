@@ -47,7 +47,7 @@ const DeviceDetails = (props) => {
 
             {device.author._id === props.user.profile &&
               <>
-                <NavLink to={`/devices/edit`} state={device}>
+                <NavLink to={`/devices/${deviceId}/edit`} state={device}>
                   <Icon category='Edit' />
                 </NavLink>
                 <button onClick={() => props.handleDeleteDevice(deviceId)}>
@@ -67,7 +67,7 @@ const DeviceDetails = (props) => {
       <section>
         <h1>Offers</h1>
         <NewOffer handleAddOffer={handleAddOffer}/>
-        <Offers offers={device.offers} user={props.user}/>
+        <Offers offers={device.offers} user={props.user} deviceId={deviceId}/>
       </section>
     </main>
   )

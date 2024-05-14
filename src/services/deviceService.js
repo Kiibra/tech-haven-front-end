@@ -88,7 +88,21 @@ async function createOffer(deviceId, offerFormData) {
   }
 }
 
-
+async function updateOffer(deviceId, offerFormData) {
+  try {
+    const res = await fetch(`${BASE_URL}/${deviceId}/offers`, {
+      method: 'PUT',
+      headers: {
+        'Authorization': `Bearer ${tokenService.getToken()}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(offerFormData)
+    })
+    return res.json()
+  } catch (error) {
+    console.log(error)
+  }
+}
 
 export {
   index,
@@ -97,5 +111,5 @@ export {
   update,
   deleteDevice as delete,
   createOffer,
-
+  updateOffer,
 }

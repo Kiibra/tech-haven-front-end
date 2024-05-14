@@ -5,6 +5,7 @@ import { NavLink } from 'react-router-dom'
 import styles from './DeviceCard.module.css'
 
 const DeviceCard = ({ device }) => {
+
   return (
     <NavLink to={`/devices/${device._id}`} >
       <main className={styles.container} >
