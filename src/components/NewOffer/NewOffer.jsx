@@ -4,7 +4,7 @@ import { useState } from "react"
 // CSS
 import styles from './NewOffer.module.css'
 
-const NewOffer = () => {
+const NewOffer = (props) => {
   const [ formData, setFormData] = useState({
     comment: '',
     value: '',
@@ -16,7 +16,7 @@ const NewOffer = () => {
 
   const handleSubmit = (evt) => {
     evt.preventDefault()
-    // Update this line shortly....
+    props.handleAddOffer(formData)
     setFormData({ 
       comment: '',
       value: '',
