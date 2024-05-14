@@ -11,6 +11,7 @@ import DeviceDetails from './pages/DeviceDetails/Devicedetails'
 import NewDevice from './pages/NewDevice/NewDevice'
 import EditDevice from './pages/EditDevice/EditDevice'
 import EditOffer from './pages/EditOffer/EditOffer'
+import Cart from '../src/components/Cart/Cart'
 
 // components
 import NavBar from './components/NavBar/NavBar'
@@ -67,6 +68,16 @@ function App() {
     navigate('/devices')
   }
 
+  const [stack, setStack] = useState([])
+
+  const addToCart = (item) => {
+    setStack([ ...stack, item])
+  }
+
+  const removeFromCart = (deviceId) => {
+    setStack(stack.filter((Id, i) => i !== deviceId))
+  }
+
   return (
     <>
       <NavBar user={user} handleLogout={handleLogout} />
@@ -84,7 +95,8 @@ function App() {
           path="/devices"
           element={
             <ProtectedRoute user={user}>
-              <DeviceList devices={devices}/>
+              <DeviceList devices={devices} addToCart={addToCart} />
+              <Cart stack={stack} removeFromCart={removeFromCart} />
             </ProtectedRoute>
           }
         />
