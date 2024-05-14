@@ -2,7 +2,7 @@
 import OfferCard from "../OfferCard/OfferCard"
 
 const Offers = (props) => {
-  
+
   if (!props.offers.length) return <h4>No Offers</h4>
   
   return (
@@ -12,6 +12,7 @@ const Offers = (props) => {
         key={offer._id}
         offer={offer}
         user={props.user}
+        deviceId={props.deviceId}
       />
     ))}
   </>
