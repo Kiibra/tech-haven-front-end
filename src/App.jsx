@@ -11,7 +11,7 @@ import DeviceDetails from './pages/DeviceDetails/DeviceDetails'
 import NewDevice from './pages/NewDevice/NewDevice'
 import EditDevice from './pages/EditDevice/EditDevice'
 import EditOffer from './pages/EditOffer/EditOffer'
-import Cart from '../src/components/Cart/Cart'
+import CartList from './components/CartList/CartList'
 
 // components
 import NavBar from './components/NavBar/NavBar'
@@ -68,14 +68,14 @@ function App() {
     navigate('/devices')
   }
 
-  const [stack, setStack] = useState([])
+  const [cartData, setCartData] = useState([])
 
   const addToCart = (item) => {
-    setStack([ ...stack, item])
+    setCartData([ ...cartData, item])
   }
 
   const removeFromCart = (deviceId) => {
-    setStack(stack.filter((Id, i) => i !== deviceId))
+    setCartData(cartData.filter((Id, device) => device !== deviceId))
   }
 
   return (
@@ -96,7 +96,7 @@ function App() {
           element={
             <ProtectedRoute user={user}>
               <DeviceList devices={devices} addToCart={addToCart} />
-              <Cart stack={stack} removeFromCart={removeFromCart} />
+              <CartList cartData={cartData} removeFromCart={removeFromCart} />
             </ProtectedRoute>
           }
         />
