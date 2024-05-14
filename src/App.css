@@ -6,7 +6,7 @@ html, body {
   margin: 0;
   height: 100%;
   overflow: hidden;
-  background-color: #f2f4f8;
+  background-color: rgb(165, 199, 241);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: canada-type-gibson, sans-serif;

@@ -14,6 +14,10 @@ const NewOffer = (props) => {
     setFormData({ ...formData, [evt.target.name]: evt.target.value })
   }
 
+  const handleInputChange = (evt) => {
+    setFormData({...formData, [evt.target.name]:  evt.target.value.replace(/\D/g, "")})
+  }
+
   const handleSubmit = (evt) => {
     evt.preventDefault()
     props.handleAddOffer(formData)
@@ -26,12 +30,15 @@ const NewOffer = (props) => {
   return (  
     <form className={styles.container} onSubmit={handleSubmit}>
       <h2>Make New Offer</h2>
-      <label htmlFor="value-input">value</label>
+      <label htmlFor="value-input">Value</label>
       <input 
-        type="value" 
+        type="text" 
+        name="value"
         id='value-input'
+        pattern="^[0-9\b]+$"
+        placeholder="offer amount"
         value={formData.value}
-        onChange={handleChange}
+        onChange={handleInputChange}
       />
       <textarea 
         required
