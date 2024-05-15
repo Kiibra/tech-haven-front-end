@@ -91,8 +91,10 @@ function App() {
           path="/devices"
           element={
             <ProtectedRoute user={user}>
-              <DeviceList devices={devices} addToCart={addToCart} />
-              <CartList cartData={cartData} removeFromCart={removeFromCart} />
+              <main className="detail" >
+                <DeviceList devices={devices} addToCart={addToCart} />
+                <CartList cartData={cartData} removeFromCart={removeFromCart} />
+              </main>
             </ProtectedRoute>
           }
         />
