@@ -30,7 +30,7 @@ const OfferCard = ({ offer, user, deviceId, handleDeleteOffer}) => {
       </header>
       <span>
         <p>{offer.comment}</p>
-        <p>{offer.value}</p>
+        <p>Value: ${offer.value}</p>
       </span>
     </main>
   )

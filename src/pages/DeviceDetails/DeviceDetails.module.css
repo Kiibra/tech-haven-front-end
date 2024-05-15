@@ -48,14 +48,6 @@
   width: 100%;
 }
 
-.container span button, .container span a {
-  background: none;
-  margin-left: 10px;
-  border-radius: 5px;
-  text-align: center;
-  cursor: pointer;
-}
-
 .container header button, .container header a {
   width: 35px;
   height: 35px;

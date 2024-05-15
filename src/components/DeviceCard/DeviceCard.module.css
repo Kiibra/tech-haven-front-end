@@ -1,11 +1,11 @@
 .container {
   width: 300px;
-  height: 300px;
+  height: 250px;
   flex-wrap: wrap;
   padding: 14px 21px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  background-color: #f9f9f9;
+  border-radius: 10px;
+  border: 1px solid #001d86;
+  background-color: #ffffff;
   margin: 8px;
 }
 
@@ -40,7 +40,6 @@ button {
 
 button:hover {
   background-color: #0056b3; /* Darker shade for hover effect */
-
 }
 
 button:disabled {

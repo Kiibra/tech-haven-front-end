@@ -10,10 +10,11 @@ const Item = (props) => {
           <img src={props.device.photo} width="120" height="130" alt="device photo" />    
           <span>
             <h1>{props.device.make}</h1>
+            <p>{props.device.model}</p>
+            <p>Price: ${props.device.price}</p>
           </span>
         </header>
-        <p>{props.device.model}</p>
-        <p>{props.device.price}</p>
+        
       </NavLink>
       <button onClick={() => props.removeFromCart(props.idx)}>X</button>
     </div>

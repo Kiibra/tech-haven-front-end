@@ -52,7 +52,7 @@ const DeviceDetails = (props) => {
             {device.author._id === props.user.profile &&
               <>
                 <NavLink to={`/devices/edit`} state={device}>
-                  <Icon category='Edit' />
+                <button><Icon category='Edit' /></button>
                 </NavLink>
                 <button onClick={() => props.handleDeleteDevice(deviceId)}>
                   <Icon category='Trash' />
