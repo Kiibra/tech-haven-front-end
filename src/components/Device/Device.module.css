@@ -1,0 +1,44 @@
+.container {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  max-width: 400px; /* Adjust max width as needed */
+  margin: 8px;
+}
+
+.container header {
+  display: flex;
+  align-items: center;
+}
+
+.container img {
+  width: 80px; /* Adjust width as needed */
+  height: auto; /* Ensure aspect ratio is maintained */
+  margin-right: 10px;
+}
+
+.container h1 {
+  margin: 0;
+}
+
+.container p {
+  margin: 0;
+  margin-right: 10px; /* Add margin between details */
+  display: inline-block; /* Ensure details are on the same line */
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}

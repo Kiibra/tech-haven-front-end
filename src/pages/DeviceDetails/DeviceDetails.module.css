@@ -1,7 +1,7 @@
 .container {
   height: 100%;
   display: flex;
-  overflow: scroll;
+  overflow: auto; /* Changed from scroll to auto */
   align-items: center;
   flex-direction: column;
   background-color: rgb(165, 199, 241);
@@ -10,7 +10,6 @@
 .container article {
   width: 100%;
   padding: 21px;
-  display: flex;
   max-width: 1000px;
   flex-direction: column;
 }
@@ -18,8 +17,7 @@
 .container > section {
   display: flex;
   flex-direction: row;
-  width: 50%;
-  height: 50%
+  width: 100%; /* Changed to 100% to take full width */
 }
 
 .container p {
@@ -42,7 +40,7 @@
 .container span {
   width: 100%;
   display: flex;
-	margin-top: 10px;
+  margin-top: 10px;
   align-items: center;
 }
 
@@ -75,9 +73,6 @@
 }
 
 /* HOVER EFFECTS */
-
 .container header button:hover, .container header a:hover {
   background-color: rgb(226, 226, 226);
 }
-
-/* ACTIVE EFFECTS */

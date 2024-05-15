@@ -7,3 +7,48 @@
   align-items: center;
   flex-direction: column;
 }
+
+form {
+  width: 100%;
+  max-width: 400px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+label {
+  display: inline-block; /* Ensure labels behave like inline elements */
+  width: 30%; /* Adjust width as needed */
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+select {
+  width: 70%; /* Adjust width to occupy remaining space */
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+button[type="submit"] {
+  width: 100%;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}

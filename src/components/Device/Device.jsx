@@ -1,7 +1,10 @@
+import styles from './Device.module.css'
+
 import { NavLink } from 'react-router-dom'
+
 const Item = (props) => {
   return (
-    <div>
+    <div className={styles.container}>
 			<NavLink to={`/devices/${props.device._id}`}>
         <header>
           <img src={props.device.photo} width="120" height="130" alt="device photo" />    

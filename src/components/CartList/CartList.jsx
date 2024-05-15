@@ -1,9 +1,13 @@
+import styles from './CartList.module.css'
+
 import Device from "../Device/Device"
 
 const CartList = (props) => {
   return (
-    <div className="device-stack">
-      <h1>My Cart</h1>
+    <>  
+    <h1>My Cart</h1>
+    <div className={styles.container}>
+      
       {!props.cartData.length &&
         <h4>There are no devices yet.</h4>
       }
@@ -16,6 +20,7 @@ const CartList = (props) => {
         />
       ))}
     </div>
+    </>
   )
 }
 
