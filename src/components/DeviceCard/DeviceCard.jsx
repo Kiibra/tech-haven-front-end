@@ -15,7 +15,7 @@ const DeviceCard = ({ device, addToCart }) => {
           </span>
         </header>
         <p>{device.model}</p>
-        <p>{device.price}</p>
+        <p>Price: ${device.price}</p>
       </NavLink>
       <button disabled={isClicked} onClick={() => {addToCart(device); setIsClicked(true)}}>+</button>
     </main>

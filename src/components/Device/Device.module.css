@@ -3,10 +3,12 @@
   align-items: center;
   padding: 20px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 10px;
   background-color: #f9f9f9;
   max-width: 400px; /* Adjust max width as needed */
   margin: 8px;
+  flex-direction: column;
+  max-height: 30vh;
 }
 
 .container header {
@@ -37,6 +39,7 @@ button {
   border-radius: 5px;
   padding: 5px 10px;
   cursor: pointer;
+  margin-left: 200px;
 }
 
 button:hover {

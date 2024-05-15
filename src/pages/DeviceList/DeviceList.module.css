@@ -1,29 +1,18 @@
 .container {
   display: flex;
   grid-template-columns: auto 1fr; /* Device list on the left, grid on the right */
-  gap: 14px;
   width: 80%; /* Adjusted max-width for the whole container */
   margin: 0 auto; /* Center the container horizontally */
   padding: 21px;
-  height: 800px; /* Adjust max height as needed */
+  height: 700px; /* Adjust max height as needed */
   overflow-y: auto; /* Enable vertical scrolling */
   margin-top: 50px;
   flex-wrap: wrap;
+  margin-left: 50px;
 }
 
 h2 {
   text-align: center;
-}
-
-.device-list {
-  width: 300px; /* Fixed width for the device list */
-}
-
-.device-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 14px;
-  overflow: auto; /* Add scrollbar if needed */
 }
 
 h2 {

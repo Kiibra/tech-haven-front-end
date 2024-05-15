@@ -1,17 +1,30 @@
+.cart {
+  display: flex;
+  flex-direction: column;
+  height: 610px; /* Adjust max height as needed */
+  padding: 20px;
+  background: rgb(222, 222, 222);
+  margin-top: 50px;
+  margin-right: 50px;
+  width: 40vh;
+  border-radius: 10px;
+}
+
 .container {
   display: flex;
   flex-direction: column;
   height: 610px; /* Adjust max height as needed */
   overflow-y: auto; /* Enable vertical scrolling */
   padding: 20px;
-  background: fuchsia;
+  background: rgb(0, 37, 105);
   margin-top: 50px;
-  margin-right: 50px;
+  margin-right: 0 auto;
+  width: 100%;
+  border-radius: 10px;
 }
 
-.container h1 {
+h1 {
   text-align: center;
-  margin-bottom: 20px;
 }
 
 .container h4 {
