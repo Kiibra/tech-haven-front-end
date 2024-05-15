@@ -67,6 +67,11 @@ function App() {
   }
 
   const addToCart = (item) => {
+    for (const cartItem of cartData){
+      if(cartItem._id === item._id) {
+        return
+      }
+    }
     setCartData([ ...cartData, item])
   }
 

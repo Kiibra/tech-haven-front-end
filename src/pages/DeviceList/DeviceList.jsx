@@ -12,7 +12,8 @@ const DeviceList = (props) => {
           <DeviceCard
             key={device._id} 
             device={device}
-            addToCart={props.addToCart} />
+            addToCart={props.addToCart} 
+            />
         ))}
       </main>
     </>

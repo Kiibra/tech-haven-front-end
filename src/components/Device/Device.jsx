@@ -14,7 +14,6 @@ const Item = (props) => {
             <p>Price: ${props.device.price}</p>
           </span>
         </header>
-        
       </NavLink>
       <button onClick={() => props.removeFromCart(props.idx)}>X</button>
     </div>

@@ -65,7 +65,7 @@ const DeviceDetails = (props) => {
         <h3>{device.model}</h3>
         <img src={device.photo} width="100" height="90" alt="device photo" />
         <p>{device.color}</p>
-        <p>{device.price}</p>
+        <p>Price: ${device.price}</p>
         <p>{device.category}</p>
       </article>
       <h1>Offers</h1>
