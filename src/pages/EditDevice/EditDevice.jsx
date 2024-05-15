@@ -87,27 +87,32 @@ const EditDevice = (props) => {
       <option value="Used">Used</option>
       <option value="Refurbished">Refurbished</option>
     </select>
-    <label htmlFor="damage-checkbox">Damage</label>
-    <input 
-      type="checkbox" 
-      id='damage-checkbox'
-      value={formData.damage}
-      onChange={handleChange}
-    />
-    <label htmlFor="scratches-checkbox">Scratches</label>
-    <input 
-      type="checkbox" 
-      id='scratches-checkbox'
-      value={formData.scratches}
-      onChange={handleChange}
-    />
-    <label htmlFor="cracks-checkbox">Cracks</label>
-    <input 
-      type="checkbox" 
-      id='cracks-checkbox'
-      value={formData.cracks}
-      onChange={handleChange}
-      />
+
+    {formData.category !== 'New' && 
+      <>
+        <label htmlFor="damage-checkbox">Damage</label>
+        <input 
+          type="checkbox" 
+          id='damage-checkbox'
+          value={formData.damage}
+          onChange={handleChange}
+        />
+        <label htmlFor="scratches-checkbox">Scratches</label>
+        <input 
+          type="checkbox" 
+          id='scratches-checkbox'
+          value={formData.scratches}
+          onChange={handleChange}
+        />
+        <label htmlFor="cracks-checkbox">Cracks</label>
+        <input 
+          type="checkbox" 
+          id='cracks-checkbox'
+          value={formData.cracks}
+          onChange={handleChange}
+        />
+      </>
+      }
     <button type="submit">Save</button>
   </form>
 </main>
