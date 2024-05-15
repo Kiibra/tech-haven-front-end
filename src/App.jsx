@@ -27,6 +27,7 @@ import './App.css'
 function App() {
   const [user, setUser] = useState(authService.getUser())
   const [devices, setDevices] = useState([])
+  const [cartData, setCartData] = useState([])
   const navigate = useNavigate()
 
   const handleLogout = () => {
@@ -41,13 +42,10 @@ function App() {
 
   useEffect(() => {
     const fetchAllDevices = async () => {
-      //API CALL
       const devicesData = await deviceService.index()
-      setDevices(devicesData) // <-- Set state with the data returned
+      setDevices(devicesData)
     }
-    if (user) fetchAllDevices() // <-- Only run the function(to display device data) if we have a user!!
-
-    //user is in dependecies b/c everytime there is a user, want to display devices and if there isnt a user, we need to update state to be empty
+    if (user) fetchAllDevices()
   }, [user])
 
   const handleDeleteDevice = async deviceId => {
@@ -67,8 +65,6 @@ function App() {
     setDevices(devices.map(device => updatedDevice._id === device._id ? updatedDevice : device))
     navigate('/devices')
   }
-
-  const [cartData, setCartData] = useState([])
 
   const addToCart = (item) => {
     setCartData([ ...cartData, item])

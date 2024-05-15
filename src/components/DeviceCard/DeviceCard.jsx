@@ -3,7 +3,7 @@ import styles from './DeviceCard.module.css'
 import { useState } from 'react'
 
 const DeviceCard = ({ device, addToCart }) => {
-  const [isClick, setIsClicked] = useState(false)
+  const [isClicked, setIsClicked] = useState(false)
   
   return (
     <main className={styles.container}>
@@ -17,7 +17,7 @@ const DeviceCard = ({ device, addToCart }) => {
         <p>{device.model}</p>
         <p>{device.price}</p>
       </NavLink>
-      <button disabled={isClick} onClick={() => {addToCart(device); setIsClicked(true)}}>+</button>
+      <button disabled={isClicked} onClick={() => {addToCart(device); setIsClicked(true)}}>+</button>
     </main>
   )
 }
