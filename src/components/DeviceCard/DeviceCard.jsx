@@ -1,9 +1,7 @@
 import { NavLink } from 'react-router-dom'
 import styles from './DeviceCard.module.css'
-import { useState } from 'react'
 
 const DeviceCard = ({ device, addToCart }) => {
-  const [isClicked, setIsClicked] = useState(false)
   
   return (
     <main className={styles.container}>
@@ -17,7 +15,7 @@ const DeviceCard = ({ device, addToCart }) => {
         <p>{device.model}</p>
         <p>Price: ${device.price}</p>
       </NavLink>
-      <button disabled={isClicked} onClick={() => {addToCart(device); setIsClicked(true)}}>+</button>
+      <button onClick={() => addToCart(device)}>+</button>
     </main>
   )
 }
