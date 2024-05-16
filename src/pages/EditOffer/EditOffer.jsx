@@ -46,7 +46,7 @@ const EditOffer = () => {
         placeholder='Offer Comment'
         onChange={handleChange}
       />
-      <button type="submit">Save Offer</button>
+      <button type="submit">SAVE</button>
     </form>
     </main>
   )
