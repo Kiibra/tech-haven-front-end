@@ -17,13 +17,27 @@ label {
   margin-bottom: 5px;
 }
 
-input,
-textarea {
-  width: 100%;
+input {
+  width: 95%;
+  height:34px;
   padding: 10px;
   margin-bottom: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
+}
+
+textarea{
+  width: 90%;
+  max-width: 95%;
+  min-width: 95%;
+  min-height: 34px;
+  max-height: 150px;
+  padding: 10px;
+  margin-bottom: 20px;
+  margin-left: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+
 }
 
 button[type="submit"] {

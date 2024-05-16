@@ -113,7 +113,7 @@ const EditDevice = (props) => {
         />
       </>
       }
-    <button type="submit">Save</button>
+    <button type="submit">SAVE</button>
   </form>
 </main>
   )

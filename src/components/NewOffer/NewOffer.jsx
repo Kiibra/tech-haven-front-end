@@ -49,7 +49,7 @@ const NewOffer = (props) => {
         placeholder='comment offer'
         onChange={handleChange}
       />
-      <button type="submit">Submit Offer</button>
+      <button type="submit">SUBMIT</button>
     </form>
   )
 }
