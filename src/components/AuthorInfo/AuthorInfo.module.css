@@ -5,17 +5,17 @@
   /* flex-direction: row; */
 }
 
-/* .container * {
+.container > section {
   margin: 0;
-} */
-.container h4{
+}
+
+.container > h4{
   font-size: 17px;
 }
 
 .container > img {
-  display: flex;
-  width: 42px;
-  height: 42px;
+  width: 50px;
+  height: 50px;
   object-fit: cover;
   margin-right: 12px;
   border-radius: 50%;

@@ -1,14 +1,14 @@
 .container {
   display: flex;
-  grid-template-columns: auto 1fr; /* Device list on the left, grid on the right */
   width: 80%; /* Adjusted max-width for the whole container */
   margin: 0 auto; /* Center the container horizontally */
   padding: 21px;
   height: 700px; /* Adjust max height as needed */
   overflow-y: auto; /* Enable vertical scrolling */
-  margin-top: 50px;
+  margin-top: 30px;
   flex-wrap: wrap;
-  margin-left: 50px;
+  margin-left: 30px;
+  gap: 40px;
 }
 
 h2 {

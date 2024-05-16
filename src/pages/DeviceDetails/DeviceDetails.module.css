@@ -4,7 +4,7 @@
   max-width: 80%;
   align-content: center;
   margin: 0 auto;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 .container article{
@@ -95,6 +95,7 @@
 .container section {
   display: flex; 
   justify-content: space-evenly;
+
 }
 
 .container header button img, .container header a img {

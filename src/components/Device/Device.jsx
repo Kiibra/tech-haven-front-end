@@ -9,7 +9,7 @@ const Item = (props) => {
         <header>
           <img src={props.device.photo} width="120" height="130" alt="device photo" />    
           <span>
-            <h1>{props.device.make}</h1>
+            <h2>{props.device.make}</h2>
             <p>{props.device.model}</p>
             <p>Price: ${props.device.price}</p>
           </span>
