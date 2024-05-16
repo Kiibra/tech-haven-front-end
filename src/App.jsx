@@ -11,11 +11,11 @@ import DeviceDetails from './pages/DeviceDetails/DeviceDetails'
 import NewDevice from './pages/NewDevice/NewDevice'
 import EditDevice from './pages/EditDevice/EditDevice'
 import EditOffer from './pages/EditOffer/EditOffer'
-import CartList from './components/CartList/CartList'
 
 // components
 import NavBar from './components/NavBar/NavBar'
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
+import CartList from './components/CartList/CartList'
 
 // services
 import * as authService from './services/authService'

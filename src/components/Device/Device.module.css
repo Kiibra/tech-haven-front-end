@@ -16,7 +16,7 @@
   align-items: center;
 }
 
-.container img {
+.container header img {
   width: 80px; /* Adjust width as needed */
   height: auto; /* Ensure aspect ratio is maintained */
   margin-right: 10px;
@@ -32,7 +32,7 @@
   display: inline-block; /* Ensure details are on the same line */
 }
 
-.container > button {
+/* .container > button {
   background-color: #007bff;
   color: #fff;
   border: none;
@@ -40,7 +40,7 @@
   padding: 5px 10px;
   cursor: pointer;
   margin-left: 200px;
-}
+} */
 
 button:hover {
   background-color: #0056b3;

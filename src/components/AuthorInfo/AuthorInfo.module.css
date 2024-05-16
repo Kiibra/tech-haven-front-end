@@ -1,16 +1,21 @@
 .container {
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  /* align-items: center; */
+  /* justify-content: flex-start; */
+  /* flex-direction: row; */
 }
 
-.container * {
+/* .container * {
   margin: 0;
+} */
+.container h4{
+  font-size: 17px;
 }
 
 .container > img {
-  width: 32px;
-  height: 32px;
+  display: flex;
+  width: 42px;
+  height: 42px;
   object-fit: cover;
   margin-right: 12px;
   border-radius: 50%;
