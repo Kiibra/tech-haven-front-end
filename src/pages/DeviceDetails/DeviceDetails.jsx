@@ -74,14 +74,14 @@ const DeviceDetails = (props) => {
         </header>
       </article>
       <div className={styles.offers}>
-      <h1>Offers</h1>
-      <section>
-        <Offers offers={device.offers} user={props.user} deviceId={deviceId}
-        handleDeleteOffer={handleDeleteOffer}
-        />
-        <NewOffer handleAddOffer={handleAddOffer}/>
-      </section>
-        </div>
+        <h1>Offers</h1>
+        <section>
+          <Offers offers={device.offers} user={props.user} deviceId={deviceId}
+          handleDeleteOffer={handleDeleteOffer}
+          />
+          <NewOffer handleAddOffer={handleAddOffer}/>
+        </section>
+      </div>
     </main>
   )
 }
