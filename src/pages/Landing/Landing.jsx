@@ -22,7 +22,7 @@ const Landing = () => {
         </section>
     </main>
       <footer className={styles.footer}>
-      <p>© 2024 TECH CYCLE INC. ALL RIGHTS RESERVED</p>
+      <p>© 2024 TECH HAVEN INC. ALL RIGHTS RESERVED</p>
     </footer>
     </>
   )
