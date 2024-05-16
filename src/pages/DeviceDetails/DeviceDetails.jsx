@@ -44,37 +44,44 @@ const DeviceDetails = (props) => {
     <main className={styles.container}>
       <article>
         <header>
-          <h3>{device.category.toUpperCase()}</h3>
+          {/* <h3>{device.category.toUpperCase()}</h3> */}
           
-          <span>
+          <div className={styles.span}>
             <AuthorInfo content={device} />
 
             {device.author._id === props.user.profile &&
-              <>
-                <NavLink to={`/devices/edit`} state={device}>
-                <button><Icon category='Edit' /></button>
-                </NavLink>
+              <div className={styles.btns}>
+                <button><NavLink to={`/devices/edit`} state={device}>
+                <Icon category='Edit' />
+                </NavLink></button>
                 <button onClick={() => props.handleDeleteDevice(deviceId)}>
                   <Icon category='Trash' />
                 </button>
-              </>
+              </div>
             }
-          </span>
-        </header>
-        <h1>{device.make}</h1>
-        <h3>{device.model}</h3>
+          </div>
+        <div className={styles.item}>
         <img src={device.photo} width="100" height="90" alt="device photo" />
-        <p>{device.color}</p>
+        <h2>{device.make}</h2>
+        <h3>{device.model}</h3>
+        </div>
+        
+        <div className={styles.details}>
+        <p>Color: {device.color}</p>
+        <p>Condition: {device.category}</p>
         <p>Price: ${device.price}</p>
-        <p>{device.category}</p>
+        </div>
+        </header>
       </article>
+      <div className={styles.offers}>
       <h1>Offers</h1>
       <section>
-        <NewOffer handleAddOffer={handleAddOffer}/>
         <Offers offers={device.offers} user={props.user} deviceId={deviceId}
         handleDeleteOffer={handleDeleteOffer}
         />
+        <NewOffer handleAddOffer={handleAddOffer}/>
       </section>
+        </div>
     </main>
   )
 }

@@ -5,7 +5,7 @@ import OfferCard from "../OfferCard/OfferCard"
 
 const Offers = (props) => {
 
-  if (!props.offers.length) return <h4>No Offers</h4>
+  if (!props.offers.length) return <h4>No offers yet</h4>
   
   return (
     <div className={styles.container}>

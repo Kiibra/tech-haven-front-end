@@ -1,11 +1,11 @@
 .container {
   width: 300px;
-  height: 250px;
+  height: 300px;
   flex-wrap: wrap;
   padding: 14px 21px;
-  border-radius: 10px;
-  border: 1px solid #001d86;
-  background-color: #ffffff;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
   margin: 8px;
 }
 
@@ -30,21 +30,21 @@ p {
 }
 
 button {
-  background-color: #007bff; /* Changed to a visible background color */
-  color: #868686;
-  border: 2px solid #007bff;
-  border-radius: 5px;
-  padding: 10px 15px;
+  background-color: #007bff; 
+  color: #f9f5f5;
+  /* border-radius: 5px;
+  padding: 10px 15px; */
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #0056b3; /* Darker shade for hover effect */
+  background-color: #0056b3; 
+
 }
 
 button:disabled {
-  background-color: #f9f9f9;
-  color: #f9f9f9;/* Adjust color for disabled state */
+  background-color: #d88282;
+  color: #f9f9f9;
   border-color: #ccc;
   cursor: not-allowed;
 }

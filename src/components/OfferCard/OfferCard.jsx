@@ -13,25 +13,24 @@ const OfferCard = ({ offer, user, deviceId, handleDeleteOffer}) => {
   return (  
     <main className={styles.container}>
       <header>
-        <AuthorInfo content={offer} />
+            <span>
+              <AuthorInfo content={offer} />
+              <p>{offer.comment}</p>
+              <p>${offer.value}</p>
+            </span> <br />
         {offer.author._id === user.profile &&
-          <>
-            <NavLink 
+          <div className={styles.offerBtns}>
+            <button><NavLink 
               to={`/devices/${deviceId}/offers/edit`}
-              state={offer}
-            >
-              <button><Icon category="Edit" /></button>
-            </NavLink>
+              state={offer}>
+              <Icon category="Edit" />
+            </NavLink></button>
             <button onClick={() => handleDeleteOffer(deviceId, offer._id)}>
               <Icon category="Trash" />
             </button>
-          </>
+          </div>
         } 
       </header>
-      <span>
-        <p>{offer.comment}</p>
-        <p>${offer.value}</p>
-      </span>
     </main>
   )
 }

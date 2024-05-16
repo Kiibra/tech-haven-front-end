@@ -31,13 +31,14 @@ const EditOffer = () => {
     <main className={styles.container}>
       <form onSubmit={handleSubmit}>
       <h2>Edit Offer</h2>
-      <label htmlFor="value-input">value</label>
+      <label htmlFor="value-input">Value:</label>
       <input 
         name="value" 
         id='value-input'
         value={formData.value}
         onChange={handleInputChange}
       />
+      <label htmlFor="comment-text">Comment:</label>
       <textarea 
         required
         name="comment"

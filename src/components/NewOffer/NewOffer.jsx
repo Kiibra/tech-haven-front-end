@@ -30,7 +30,7 @@ const NewOffer = (props) => {
   return (  
     <form className={styles.container} onSubmit={handleSubmit}>
       <h2>Make New Offer</h2>
-      <label htmlFor="value-input">Value</label>
+      <label htmlFor="value-input">Value:</label>
       <input 
         type="text" 
         name="value"
@@ -40,11 +40,13 @@ const NewOffer = (props) => {
         value={formData.value}
         onChange={handleInputChange}
       />
+      <label htmlFor="comment-text">Comment:</label>
       <textarea 
         required
+        id="comment-text"
         name="comment"
         value={formData.comment}
-        placeholder='Offer Comment'
+        placeholder='comment offer'
         onChange={handleChange}
       />
       <button type="submit">Submit Offer</button>

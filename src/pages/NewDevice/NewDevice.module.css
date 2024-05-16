@@ -19,24 +19,33 @@ h1 {
 }
 
 label {
-  display: inline-block; /* Ensure labels behave like inline elements */
-  width: 30%; /* Adjust width as needed */
+  display: inline-block; 
+  width: 30%; 
   margin-bottom: 5px;
-}
+} 
 
-input[type="text"],
-select {
-  width: 70%; /* Adjust width to occupy remaining space */
+input[type="text"] {
+  width: 95%;
   padding: 10px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  box-sizing: border-box; /* Ensure padding is included in width */
+  box-sizing: border-box;
+}
+
+select {
+  width: 95%;
+  padding: 10px;
+  margin-bottom: 10px;
+  margin-left: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
 }
 
 input[type="checkbox"] {
   margin-right: 5px;
-}
+} 
 
 button[type="submit"] {
   width: 100%;
