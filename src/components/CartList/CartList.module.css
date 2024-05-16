@@ -7,6 +7,7 @@
   margin-top: 50px;
   margin-right: 50px;
   width: 40vh;
+  min-width: 40vh;
   border-radius: 10px;
 }
 
@@ -27,7 +28,7 @@ h1 {
   text-align: center;
 }
 
-.container h4 {
+.container > h4 {
   margin-top: 10px;
   text-align: center;
   color: rgb(255, 255, 255);

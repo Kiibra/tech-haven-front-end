@@ -1,13 +1,13 @@
 .container{
-  /* display: flex; */
-  /* align-items: center; */
+  display: flex;
+  align-items: start;
   padding: 12px;
   border: 1px solid #cdcdcd;
   border-radius: 10px;
   background-color: #d8d8d8;
   max-width: 450px; /* Adjust max width as needed */
   margin: 8px;
-  flex-direction: row;
+  flex-direction: column;
   /* max-height: 96px; */
   /* max-width: 400px; */
 }

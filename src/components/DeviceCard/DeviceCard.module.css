@@ -7,6 +7,7 @@
   border: 1px solid #ccc;
   background-color: #f9f9f9;
   margin: 8px;
+  margin-bottom: 8px;
 }
 
 header {
@@ -29,22 +30,15 @@ p {
   margin: 5px 0;
 }
 
-button {
-  background-color: #007bff; 
-  color: #f9f5f5;
-  /* border-radius: 5px;
-  padding: 10px 15px; */
+.container > button {
+  background-color: #005dc1; 
+  border-radius: 5px;
+  border: none;
   cursor: pointer;
+  color: #fff;
+  padding: 5px 10px;
 }
 
-button:hover {
-  background-color: #0056b3; 
-
-}
-
-button:disabled {
-  background-color: #d88282;
-  color: #f9f9f9;
-  border-color: #ccc;
-  cursor: not-allowed;
+.container > button:hover {
+  background-color: #0031a5; 
 }
