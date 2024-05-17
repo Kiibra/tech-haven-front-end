@@ -13,7 +13,7 @@ Tech Haven a platform where you can browse for devices on sale, make offers on d
 # [Use App Here 🖥️](https://tech-haven-ks.netlify.app) 
 ***
 
-### [Back-end repo here](https://github.com/Cyber214/tech-haven-front-end )
+### [Back-end repo here](https://github.com/Cyber214/tech-haven-back-end )
 
 ### `Technologies Used 💾`
 ***
