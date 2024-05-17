@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  max-height: 95vh;
+  max-height: 85vh;
 }
 .container section {
   padding: 0px 22px;
@@ -10,16 +10,17 @@
 
 .container > section {
   width: 100%;
-  display: flex;
-  align-items: center;
+  /* display: flex; */
+  /* align-items: center;
   flex-direction: column;
+  flex-wrap: wrap; */
 }
 
 .container > img {
   width: 30%;
   min-width: 500px;
-  margin-bottom: 20vh;
-  margin-top: 6vh;
+  margin-bottom: 10vh;
+  margin-top: 10vh;
 }
 .splash {
   /* height: 11vh; */
@@ -27,7 +28,8 @@
 }
 
 .about {
-  /* height: 50vh; */
+  height: 50vh;
+  /* margin-bottom: 220px; */
   background-color: white;
   box-shadow: -1px 5px 19px -5px rgba(214, 130, 57, 0.15);
   -moz-box-shadow: -1px 5px 19px -5px rgba(0,0,0,0.15);
@@ -44,11 +46,11 @@
 }
 
 .about article p {
-  margin: 0;
+  /* margin: 0;
   width: 100%;
   font-size: 16px;
   line-height: 28px;
-  text-align: center;
+  text-align: center; */
 }
 
 .container section > header * {
@@ -79,7 +81,7 @@
   margin: 0;
   width: 100%;
   padding: 0px;
-  display: flex;
+  /* display: flex; */
   align-items: center;
   justify-content: center;
 }

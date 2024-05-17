@@ -7,12 +7,14 @@ input {
 
 input[type="file"] {
   padding: 0;
+  /* max-width: 100px; */
 }
 
 .container {
   display: flex;
   align-items: center;
   flex-direction: column;
+  /* background-color: #673ab7; */
 }
 
 .message {
@@ -27,12 +29,12 @@ input[type="file"] {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 50px;
+  margin-bottom: 80px;
 }
 
 .label {
   width: 100%;
-  display: flex;
+  /* display: flex; */
   justify-content: end;
   align-items: center;
   margin-bottom: 8px;

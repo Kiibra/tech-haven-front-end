@@ -10,7 +10,8 @@ const EditDevice = (props) => {
   const [formData, setFormData] =useState(state)
 
   const handleChange = (evt) => {
-    setFormData({ ...formData, [evt.target.name]: evt.target.value })
+    const result = 'checkbox' === evt.target.type ? evt.target.checked : evt.target.value
+    setFormData({...formData, [evt.target.name]: result })
   }
   const handlePriceInput = (evt) => {
     setFormData({...formData, [evt.target.name]:  evt.target.value.replace(/\D/g, "")})
@@ -94,13 +95,15 @@ const EditDevice = (props) => {
         <input 
           type="checkbox" 
           id='damage-checkbox'
-          value={formData.damage}
+          name='damage'
+          value={formData.damage} 
           onChange={handleChange}
         />
         <label htmlFor="scratches-checkbox">Scratches</label>
         <input 
           type="checkbox" 
           id='scratches-checkbox'
+          name='scratches'
           value={formData.scratches}
           onChange={handleChange}
         />
@@ -108,6 +111,7 @@ const EditDevice = (props) => {
         <input 
           type="checkbox" 
           id='cracks-checkbox'
+          name='cracks'
           value={formData.cracks}
           onChange={handleChange}
         />

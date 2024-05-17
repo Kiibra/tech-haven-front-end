@@ -61,7 +61,7 @@ const DeviceDetails = (props) => {
             }
           </div>
         <div className={styles.item}>
-        <img src={device.photo} width="100" height="90" alt="device photo" />
+        <img src={device.photo} alt="device photo" />
         <h2>{device.make}</h2>
         <h3>{device.model}</h3>
         </div>
@@ -69,6 +69,10 @@ const DeviceDetails = (props) => {
         <div className={styles.details}>
         <p>Color: {device.color}</p>
         <p>Condition: {device.category}</p>
+        {/* {device.damage && <p>Damage </p>} */}
+        <p>Damage: {device.damage ? 'yes' : 'no'} </p>
+        <p>Scratches: {device.scratches ? 'yes' : 'no'} </p>
+        <p>Cracks: {device.cracks ? 'yes' : 'no'} </p>
         <p>Price: ${device.price}</p>
         </div>
         </header>
