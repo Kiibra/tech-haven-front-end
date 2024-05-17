@@ -19,11 +19,11 @@ const Landing = () => {
             Tech Haven provides you a platform where you can browse for devices that others are selling, make offers on devices you would like to purchase, post a device of your own, & choose which offer satifsy you. With Tech Haven, you have access to a diverse range of devices, catering to various preferences, and budgets. You can now browse and sell with Tech Haven and feel asured as our robust security routes protect you against potential risks, fostering a safe haven for your selling and buying activities.
             </p>
           </article>
-        </section>
+        <footer className={styles.footer}>
+          <p>© 2024 TECH HAVEN INC. ALL RIGHTS RESERVED</p>
+        </footer>
+      </section>
     </main>
-      <footer className={styles.footer}>
-      <p>© 2024 TECH HAVEN INC. ALL RIGHTS RESERVED</p>
-    </footer>
     </>
   )
 }
