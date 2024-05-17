@@ -7,9 +7,6 @@
   background-color: #d8d8d8;
   max-width: 450px; /* Adjust max width as needed */
   margin: 8px;
-  /* flex-direction: row; */
-  /* max-height: 96px; */
-  /* max-width: 400px; */
 }
 .container header{
   font-size: 2px;
@@ -18,9 +15,6 @@
 .offerbtns {
   font-size: small;
   float: right;
-  /* display: flex; */
-  /* width: 10px; */
-  /* height: 10px; */
 }
 
 .container img{
@@ -29,7 +23,6 @@
 }
 
 .container span{
-  /* display: flex; */
   font-size: 14px;
   color: rgb(119, 119, 124);
 }
