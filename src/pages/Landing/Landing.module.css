@@ -45,14 +45,6 @@
   flex-direction: column;
 }
 
-.about article p {
-  /* margin: 0;
-  width: 100%;
-  font-size: 16px;
-  line-height: 28px;
-  text-align: center; */
-}
-
 .container section > header * {
   margin: 0px;
   font-weight: 600;
