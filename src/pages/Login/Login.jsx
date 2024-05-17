@@ -2,6 +2,8 @@
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 
+import logo from '../../assets/Branding/logo.png'
+
 // services
 import * as authService from '../../services/authService'
 
@@ -73,6 +75,7 @@ const LoginPage = ({ handleAuthEvt }) => {
           </button>
         </div>
       </form>
+      <img src={logo} alt="app logo" />
     </main>
   )
 }

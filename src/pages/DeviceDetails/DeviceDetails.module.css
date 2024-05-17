@@ -18,7 +18,7 @@
 
 .span{
   width: 100%;
-  padding: 16px;
+  padding: 8px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -46,8 +46,8 @@
 }
 
 .item > img {
-  width: 160px;
-  height: 160px;
+  width: 180px;
+  height: 180px;
   margin: 0 auto;
   border-radius: 10px;
 }
@@ -67,6 +67,7 @@
   background-color: rgb(248, 237, 224);
   margin-bottom: 18px;
   font-size: medium;
+  /* height: 24px; */
 }
 
 /* device details container */
@@ -74,7 +75,9 @@
   align-content: center;
   background-color: rgb(201, 201, 201);
   margin-left: 80px;
-  height: 180px;
+  /* margin-bottom: 20px; */
+  flex-wrap: wrap;
+  height: 240px;
   width: 240px;
   padding: 12px;
   border-radius: 10px;
@@ -91,6 +94,7 @@
 .offers{
   background-color: rgb(232, 232, 232);
   border-radius: 10px;
+  margin-top: 60px;
 }
 
 .container section {

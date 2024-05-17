@@ -12,9 +12,9 @@ const NewDevice = (props) => {
     color: '',
     price: '',
     category: 'New',
-    damage: 'no',
-    scratches: 'no',
-    cracks: 'no'
+    damage: false,
+    scratches: false,
+    cracks: false
   })
 
   const handleSubmit = evt => {
@@ -23,7 +23,9 @@ const NewDevice = (props) => {
   }
 
   const handleChange = evt => {
-    setFormData({...formData, [evt.target.name]: evt.target.value})
+    const result = 'checkbox' === evt.target.type ? evt.target.checked : evt.target.value
+    setFormData({...formData, [evt.target.name]: result })
+
   }
   const handlePriceInput = (evt) => {
     setFormData({...formData, [evt.target.name]:  evt.target.value.replace(/\D/g, "")})
@@ -102,13 +104,15 @@ const NewDevice = (props) => {
         <input 
           type="checkbox" 
           id='damage-checkbox'
-          value={formData.damage}
+          name='damage'
+          value={formData.damage} 
           onChange={handleChange}
         />
         <label htmlFor="scratches-checkbox">Scratches</label>
         <input 
           type="checkbox" 
           id='scratches-checkbox'
+          name='scratches'
           value={formData.scratches}
           onChange={handleChange}
         />
@@ -116,6 +120,7 @@ const NewDevice = (props) => {
         <input 
           type="checkbox" 
           id='cracks-checkbox'
+          name='cracks'
           value={formData.cracks}
           onChange={handleChange}
         />

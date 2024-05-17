@@ -12,8 +12,9 @@ const DeviceCard = ({ device, addToCart }) => {
             <h1>{device.make}</h1>
           </span>
         </header>
-        <p>{device.model}</p>
+        <p>{device.model} </p> 
         <p>Price: ${device.price}</p>
+
       </NavLink>
       <button onClick={() => addToCart(device)}>+</button>
     </main>
