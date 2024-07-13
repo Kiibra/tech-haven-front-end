@@ -11,6 +11,16 @@
   gap: 40px;
 }
 
+/* this hides the index page scrollbar for Chrome and/or Safari */
+.container::-webkit-scrollbar {
+  display: none;
+}
+
+.container {
+  -ms-overflow-style: none;  /* this hides it for IE and Edge */
+  scrollbar-width: none;     /* this hides it for in Firefox */
+}
+
 h2 {
   text-align: center;
 }

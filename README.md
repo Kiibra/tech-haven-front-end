@@ -44,7 +44,7 @@ Tech Haven a platform where you can browse for devices on sale, make offers on d
 ***
 ### `Ice Box🧊`
 *** 
-- [x] AAU, I should be able to search for a device by it's category(condition).
-- [x] AAU, I should be able to directly upload photos from my desktop or photos.
-- [x] AAU I want to be able to use my app on my phone as well not only on the browser.
-- [x] AAU, I want to see the amount of offers that is currently in a specific device and every time a new offer is made the number goes up, and a red circle is displayed behind the number(Notification feature)
+- [] AAU, I should be able to search for a device by it's category(condition).
+- [] AAU, I should be able to directly upload photos from my desktop or photos.
+- [] AAU I want to be able to use my app on my phone as well not only on the browser.
+- [] AAU, I want to see the amount of offers that is currently in a specific device and every time a new offer is made the number goes up, and a red circle is displayed behind the number(Notification feature)

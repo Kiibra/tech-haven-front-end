@@ -9,7 +9,7 @@ const CartList = (props) => {
       <div className={styles.container}>
         
         {!props.cartData.length &&
-          <h4>There are no devices yet.</h4>
+          <h4>No devices in your cart yet. </h4>
         }
         {props.cartData.map((device, idx) => (
           <Device
